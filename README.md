@@ -1,6 +1,6 @@
 # ExtraTreesRegressor-in-Python---First-Go
 
-Data source here: http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity<br>
+<i>Data source here: http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity</i><br>
 Target column (what want to predict) is last column "shares"<br>
 Removed url column and saved as new file<br>
 This code is a work in progress (I'm new to Python)<br>
