@@ -11,15 +11,15 @@ from sklearn.ensemble import ExtraTreesRegressor<br>
 from sklearn.cross_validation import train_test_split<br>
 <br>
 def import_dataset(filename, all_data):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;with open(filename,'rb') as csvfile:<br>
-		csv_has_header = csv.Sniffer().has_header(csvfile.read(10*1024))<br>
-		csvfile.seek(0)<br>
-		if csv_has_header:<br>
-			csvfile.next()<br>
-		csvlines = csv.reader(csvfile, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)<br>
-		dataset=list(csvlines)<br>
-		for x in range (len(dataset)):<br>
-			all_data.append(dataset[x])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with open(filename,'rb') as csvfile:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;csv_has_header = csv.Sniffer().has_header(csvfile.read(10*1024))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;csvfile.seek(0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if csv_has_header:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;csvfile.next()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;csvlines = csv.reader(csvfile, delimiter=',', quoting=csv.QUOTE_NONNUMERIC)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataset=list(csvlines)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for x in range (len(dataset)):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all_data.append(dataset[x])<br>
 
 def export_dataset(filename, prediction_result):<br>
 	with open(filename, 'wb') as output:<br>
