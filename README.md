@@ -1,9 +1,9 @@
 # ExtraTreesRegressor-in-Python---First-Go
 
-<i>Data source here: http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity</i><br>
-<i>Target column (what want to predict) is last column "shares"</i><br>
-<i>Removed url column and saved as new file</i><br>
-<i>This code is a work in progress (I'm new to Python)</i><br>
+<i># Data source here: http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity</i><br>
+<i># Target column (what want to predict) is last column "shares"</i><br>
+<i># Removed url column and saved as new file</i><br>
+<i># This code is a work in progress (I'm new to Python)</i><br>
 
 import csv<br>
 import numpy as np<br>
